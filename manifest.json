@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Text Selection Logger",
+  "version": "1.0",
+  "description": "Log selected text to the console.",
+  "permissions": ["contextMenus"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
